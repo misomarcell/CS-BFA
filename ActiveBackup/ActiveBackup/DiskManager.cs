@@ -22,11 +22,11 @@ namespace ActiveBackup
 
         /// <summary>
         /// Checks if the working drive reached one of the limit values and starts the copy/move action.
-        /// </summary>
+        /// </su
+        /// mmary>
         public static void CheckForBackup()
         {
-            Debug.WriteLine("Working Drive: " + GetDiskUsage(Settings.workingDrive) + "%");
-            Debug.WriteLine("Settings High: " + Settings.HIGH + "%");
+            Debug.WriteLine("Working Drive: " + GetDiskUsage(Settings.workingDrive) + "% Free");
             if ((100 - GetDiskUsage(Settings.workingDrive)) >= Settings.HIGH)
             {
                 Console.WriteLine("\nBackupping files...");

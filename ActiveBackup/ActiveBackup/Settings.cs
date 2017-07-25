@@ -41,7 +41,7 @@ namespace ActiveBackup
         {
             List<String> watchList = new List<String>();
             string watchlist = Environment.GetEnvironmentVariable("WATCH_THIS", EnvironmentVariableTarget.Machine);
-            foreach (string folder in watchlist.Split(",".ToCharArray()[0]))
+            foreach (string folder in watchlist.Split(";".ToCharArray()[0]))
             {
                 watchList.Add(folder);
                 Console.WriteLine("Watching folder: " + folder);
